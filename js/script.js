@@ -246,7 +246,7 @@
 	
 	
 	// Google Map Settings
-	if($('#map-location').length){
+	/*if($('#map-location').length){
 		var map;
 		 map = new GMaps({
 			el: '#map-location',
@@ -266,7 +266,7 @@
 			}
 		 
 		});
-	}
+	}*/
 	
 	
 	// Scroll to top

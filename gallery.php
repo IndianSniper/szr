@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
 <meta charset="utf-8">
-<title>Dreamland Property and Real Estate HTML5 Template | Gallery Full Width</title>
+<title>SZR Interiors | Gallery</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/revolution-slider.css" rel="stylesheet">
@@ -45,16 +43,6 @@
                 <div class="text"><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p></div>
             </div>
             
-            <!--Filter-->
-            <div class="filters">
-            	<ul class="filter-tabs clearfix anim-3-all">
-                    <li class="filter" data-role="button" data-filter="all">All</li>
-                    <li class="filter" data-role="button" data-filter=".bedroom">Bedroom</li>
-                    <li class="filter" data-role="button" data-filter=".living-room">Living Room</li>
-                    <li class="filter" data-role="button" data-filter=".kitchen">Kitchen</li>
-                    <li class="filter" data-role="button" data-filter=".garage">Garage</li>
-                </ul>
-            </div>
             
         </div>
         
@@ -62,69 +50,30 @@
             <div class="filter-list clearfix">
                 
                 <!--Image Box-->
-                <div class="image-box mix mix_all living-room kitchen garage">
+                 <?php
+                      #include database connection file
+                      include('admin/connection/dbConnection.php');
+                      
+                      #query
+                      $q="select * from gallery";
+                      $result=$conn->query($q);
+                     if($result->num_rows>0){ 
+                    
+                    while($row=$result->fetch_assoc()){
+					echo'<div class="image-box mix mix_all living-room kitchen garage">
                     <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/1.jpg" class="lightbox-image"><img src="images/gallery/1.jpg" alt=""></a></figure>
-                        <a href="images/gallery/1.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
+                        <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
+                        <img src="'.$row['image_path'].'" alt=""></a></figure>
+                        <a href='.$row['image_path'].'" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
                     </div>
-                </div>
+                </div>';
+                }
+                  
+                }
+                  $conn->close();   
+                  ?>
                 
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom kitchen garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/2.jpg" class="lightbox-image"><img src="images/gallery/2.jpg" alt=""></a></figure>
-                        <a href="images/gallery/2.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/3.jpg" class="lightbox-image"><img src="images/gallery/3.jpg" alt=""></a></figure>
-                        <a href="images/gallery/3.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room kitchen">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/4.jpg" class="lightbox-image"><img src="images/gallery/4.jpg" alt=""></a></figure>
-                        <a href="images/gallery/4.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/5.jpg" class="lightbox-image"><img src="images/gallery/5.jpg" alt=""></a></figure>
-                        <a href="images/gallery/5.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all living-room kitchen">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/6.jpg" class="lightbox-image"><img src="images/gallery/6.jpg" alt=""></a></figure>
-                        <a href="images/gallery/6.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/7.jpg" class="lightbox-image"><img src="images/gallery/7.jpg" alt=""></a></figure>
-                        <a href="images/gallery/7.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room kitchen">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/8.jpg" class="lightbox-image"><img src="images/gallery/8.jpg" alt=""></a></figure>
-                        <a href="images/gallery/8.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
+           
             </div>
         </div>
         
@@ -170,30 +119,7 @@
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var $_Tawk_API={},$_Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/569cfc09aeafd72017dd6ea9/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-15521914-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 </body>
 

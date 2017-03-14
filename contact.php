@@ -4,7 +4,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>Dreamland Property and Real Estate HTML5 Template | Contact Us</title>
+<title>SZR Interiors | Contact Us</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -38,11 +38,6 @@
     <section class="info-section contact-section">
     	<div class="auto-container">
             <h2>It’s Easy to Find Us</h2>
-            <!--Text-->
-            <div class="desc-text bitter-font">
-                <p><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been <br>the industry's standard dummy text ever since the 1500s, when an unknownto.</em> </p>
-            </div>
-            
             <!--Contact Info-->
             <div class="contact-info">
                 <div class="row clearfix">
@@ -50,19 +45,19 @@
                     <div class="column col-md-4 col-sm-6 col-xs-12">
                         <span class="icon flaticon-location74"></span>
                         <h3>ADDRESS</h3>
-                        <p>Mirpur New Bazar Road, Block-c, <br>Dhaka-1210</p>
+                        <p>SZR Interiors, Sai Shraddha I Plot, A1 Building, Shop No.3, Daulat Nagar, Relief Road, Santacruz (West) Mumbai – 400 054</p>
                     </div>
                     <!--Column-->
                     <div class="column col-md-4 col-sm-6 col-xs-12">
                         <span class="icon flaticon-telephone51"></span>
                         <h3>PHONE</h3>
-                        <p>(732) 803-01 03, (732) 806-01 04, <br>(880)172380129</p>
+                        <p>+91 9833 1819 65</p>
                     </div>
                     <!--Column-->
                     <div class="column col-md-4 col-sm-6 col-xs-12">
                         <span class="icon flaticon-envelope126"></span>
                         <h3>EMAIL</h3>
-                        <p>info@companyname.com, <br>otheremail@gmail.com</p>
+                        <p>Info@szrinteriors.com, <br>szrinteriors@gmail.com</p>
                     </div>
                     
                 </div>
@@ -75,7 +70,8 @@
     
     <!--Map Section-->
     <section class="map-section">
-    	<div class="map-container" id="map-location"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d942.5928272813666!2d72.8343379268362!3d19.091360013665817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA1JzI4LjkiTiA3MsKwNTAnMDUuNiJF!5e0!3m2!1sen!2s!4v1489461155656" style="width:100%;height:450px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
     </section>
     
     
@@ -85,18 +81,23 @@
     	<div class="auto-container small-container">
             	<div class="sec-title">
                 	<h2>Contact Form</h2>
-                    <div class="text"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknownto </p></div>
                 </div>
+                
             <!--Contact Form-->
             <div class="column contact-form">
-                <form method="post" id="contact-form" action="http://wp1.themexlab.com/html/dreamland/sendemail.php">
-                    
+                <form method="post" id="contact-form" action="send_message.php">
                     <div class="row clearfix">
                         <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                            <input type="text" name="username" value="" placeholder="Username">
+                            <input type="text" name="username" value="" placeholder="Username"/>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                            <input type="email" name="email" value="" placeholder="Email">
+                            <input type="text" name="company" value="" placeholder="Company">
+                        </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12 form-group">
+                            <input type="text" name="phone" value="" placeholder="Phone Number" required>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 form-group">
+                            <input type="email" name="email" value="" placeholder="Email" >
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12 form-group">
                             <input type="text" name="subject" value="" placeholder="Subject">
@@ -135,30 +136,7 @@
 <script src="js/googlemaps.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var $_Tawk_API={},$_Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/569cfc09aeafd72017dd6ea9/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-15521914-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 </body>
 

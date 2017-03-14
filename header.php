@@ -13,15 +13,14 @@
                 	
                     <!--Info-->
                     <ul class="info pull-left clearfix">
-                        <li class="email"><a href="mailto:contact@szrinterior.com"><span class="icon flaticon-email2"></span> contact@szrinterior.com</a></li>
-                        <li class="phone"><a href="#"><span class="icon flaticon-phone325"></span> (+91) 1723 801729 </a></li>
+                        <li class="email"><a href="mailto:info@szrinterior.com"><span class="icon flaticon-email2"></span>Info@szrinteriors.com / szrinteriors@gmail.com</a></li>
+                        <li class="phone"><a href="#"><span class="icon flaticon-phone325"></span> (+91) 9833 1819 65 </a></li>
                     </ul>
                     
                     <!--Social Links-->
                     <div class="social-links pull-left clearfix">
                     	<a href="#"><span class="fa fa-facebook-f"></span></a>
                         <a href="#"><span class="fa fa-twitter"></span></a>
-                        <a href="#"><span class="fa fa-linkedin"></span></a>
                         <a href="#"><span class="fa fa-google-plus"></span></a>
                     </div>
                     

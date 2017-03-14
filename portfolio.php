@@ -4,7 +4,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>Dreamland Property and Real Estate HTML5 Template | Gallery Full Width</title>
+<title>SZR Interiors | Portfolio</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/revolution-slider.css" rel="stylesheet">
@@ -24,128 +24,80 @@
    <?php include('header.php'); ?>
     
     
-    <!--Page Title-->
+        <!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/page-title-bg-1.jpg);">
     	<div class="auto-container">
         	<div class="content-box">
-            	<h1>Gallery Full Width</h1>
-                <div class="bread-crumb"><a href="index-2.html">Home</a> / <a href="#" class="current">Gallery</a></div>
+            	<h1>Portfolio</h1>
+                <div class="bread-crumb"><a href="index-2.html">Home</a> / <a href="#" class="current">Portfolio</a></div>
             </div>
         </div>
     </section>
     
     
     
-    <!--Gallery Section-->
-    <section class="gallery-section full-width" id="gallery-section">
+    <!--Sidebar Page-->
+    <div class="sidebar-page">
     	<div class="auto-container">
         
-            <!--Section Title-->
-            <div class="sec-title">
-                <div class="text"><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p></div>
+        	<div class="row clearfix">
+            	
+                <!--Content Side-->	
+                <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
+                    <section class="blog-container">
+                        
+                        <!--portfolio Post-->
+                        <?php
+                      #include database connection file
+                      include('admin/connection/dbConnection.php');
+                      
+                      #query
+                      $q="select * from portfolio";
+                      $result=$conn->query($q);
+                     if($result->num_rows>0){ 
+                    
+                    while($row=$result->fetch_assoc()){
+					echo'<div class="blog-post wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <article class="inner-box">
+                            	<!--Image-->
+                                <figure class="image-box">
+                                    <a href="#"><img src="'.$row['image_path'].'" alt=""></a>
+                                    <div class="post-options">
+											<a href="#" class="plus-icon img-circle"><span class="icon flaticon-news37"></span></a>
+											<a href="#" class="heart-icon img-circle"><span class="icon fa fa-heart"></span></a>
+										</div>
+                                </figure>
+                                <!--Lower Content-->
+                                <div class="lower-part">
+                                    <div class="post-info">
+                                       Posted On <a href="#"><strong>March 10, 2014</strong></a>
+                                    </div>
+                                    <div class="post-title"><h3><a href="#">This is post with big title and image</a></h3></div>
+                                    <div class="post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam assumenda modi unde ad optio voluptas quaerat officiis esse deleniti facilis voluptates, quos sapiente. Nihil nostrum soluta odit aliquid placeat, maiores autem sapiente adipisci dignissimos, tempore, nesciunt mollitia quas similique? Corporis illo quis, temporibus porro.</div>
+                                    
+
+                                </div>
+                            </article>
+                        </div>';
+                    }
+                  
+                }
+                  $conn->close();   
+                  ?>
+                    </section>
+                    
+                    <br>
+                
+                    
+                </div>
+                <!--Content Side-->
+                
+                
             </div>
             
-            <!--Filter-->
-            <div class="filters">
-            	<ul class="filter-tabs clearfix anim-3-all">
-                    <li class="filter" data-role="button" data-filter="all">All</li>
-                    <li class="filter" data-role="button" data-filter=".bedroom">Bedroom</li>
-                    <li class="filter" data-role="button" data-filter=".living-room">Living Room</li>
-                    <li class="filter" data-role="button" data-filter=".kitchen">Kitchen</li>
-                    <li class="filter" data-role="button" data-filter=".garage">Garage</li>
-                </ul>
-            </div>
             
         </div>
-        
-        <div class="images-container">
-            <div class="filter-list clearfix">
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all living-room kitchen garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/1.jpg" class="lightbox-image"><img src="images/gallery/1.jpg" alt=""></a></figure>
-                        <a href="images/gallery/1.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom kitchen garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/2.jpg" class="lightbox-image"><img src="images/gallery/2.jpg" alt=""></a></figure>
-                        <a href="images/gallery/2.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/3.jpg" class="lightbox-image"><img src="images/gallery/3.jpg" alt=""></a></figure>
-                        <a href="images/gallery/3.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room kitchen">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/4.jpg" class="lightbox-image"><img src="images/gallery/4.jpg" alt=""></a></figure>
-                        <a href="images/gallery/4.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/5.jpg" class="lightbox-image"><img src="images/gallery/5.jpg" alt=""></a></figure>
-                        <a href="images/gallery/5.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all living-room kitchen">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/6.jpg" class="lightbox-image"><img src="images/gallery/6.jpg" alt=""></a></figure>
-                        <a href="images/gallery/6.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/7.jpg" class="lightbox-image"><img src="images/gallery/7.jpg" alt=""></a></figure>
-                        <a href="images/gallery/7.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room kitchen">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/8.jpg" class="lightbox-image"><img src="images/gallery/8.jpg" alt=""></a></figure>
-                        <a href="images/gallery/8.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-    </section>
-    
-    <!--Intro Section-->
-    <section class="intro-section">
-    	<div class="auto-container">
-        	<div class="outer-box clearfix">
-            	<span class="anim-image wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms"><img src="images/logo-2.png" alt=""></span>
-                <div class="col-md-9 col-sm-7 col-xs-12">
-                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled .</p>
-                </div>
-                <div class="col-md-3 col-sm-5 col-xs-12 text-right">
-                	<a href="#" class="theme-btn btn-style-two">CONTACT NOW</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+    </div>
     
     
     <!--Main Footer-->
@@ -170,30 +122,7 @@
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var $_Tawk_API={},$_Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/569cfc09aeafd72017dd6ea9/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-15521914-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 </body>
 

@@ -4,7 +4,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>Dreamland Property and Real Estate HTML5 Template | About Us</title>
+<title>SZR Interiors | About Us</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -40,13 +40,35 @@
         
             <!--Section Title-->
             <div class="sec-title">
-                <h2>WELCOME TO <strong>DREAM</strong> <span class="light">LAND</span></h2>
+                <h2>WELCOME TO <strong>SZR</strong> <span class="light">Interiors</span></h2>
                 <div class="separator small-separator"></div>
-                <div class="text"><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p></div>
+                <div class="text"><p>We believe in delivering excellent services in STYLE with ZEAL to get work RECOGNITION within industry. Our logo, inspired from the three core words related to field of Interior Designing.  </p></div>
             </div>
             
             <!--Full Image Box-->
             <figure class="full-image-box"><img src="images/resource/featured-image-1.jpg" alt=""></figure>
+            
+            <div class="separator small-separator"></div>
+            <div class="text"><p>
+            Being interior designing firm, we continuously focus on offering economically viable solutions to clients with the help of creative approach, error free operations and systems and timely quality checks.
+            </p></div>
+            <div class="separator small-separator"></div>
+            <div class="text"><p>
+            Our Domain Expert includes Corporate Centers, Call Centers, Personal Offices, Luxury Homes, Apartments and Holiday
+            Homes keeping in mind client’s individual taste, their lifestyle and budget. Our complete service portfolio includes 
+            Complete Designing & Turnkey Solutions, Timely Completion of Projects, Project Optimization through Material Selection 
+            & Scheduling, Designing of Electrical, Telecommunication & Data Services, HVAC etc.
+            </p></div>
+            <div class="separator small-separator"></div>
+            <div class="text"><p>
+            We strive hard to provide best suited interiors to live and to work within the given space.
+            At SZR Interiors, we aim to work together with our clients to ensure that your needs are aptly satisfied within an agreed budget.
+             
+            Our core objective is to achieve Client Satisfaction through quality services. We ensure to provide 100% commitment in each assignment taken by us.
+            With highly skilled professional team we are equipped to undertake any size of project at PAN India. 
+            In India, our territory coverage includes North Zone, South Zone, East Zone, West Zone, Central Zone and North East Zone.
+            </p></div>            
+            <div class="separator small-separator"></div>
             
             <div class="services-outer">
                 <div class="row clearfix">
@@ -56,8 +78,7 @@
                         <div class="inner-box">
                             <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">1</span></div>
                             <div class="content">
-                                <h3>Largest Community</h3>
-                                <p>Lorem ipsum dolor sit amet, et sectetu adipiscing elit, sed do lilae eiusmod at tempor.</p>
+                                <h3>Creativity</h3>
                             </div>
                         </div>
                     </article>
@@ -67,8 +88,7 @@
                         <div class="inner-box">
                             <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">2</span></div>
                             <div class="content">
-                                <h3>24 HOURS SERVICE</h3>
-                                <p>Lorem ipsum dolor sit amet, et sectetu adipiscing elit, sed do lilae eiusmod at tempor.</p>
+                                <h3>Service</h3>
                             </div>
                         </div>
                     </article>
@@ -78,8 +98,7 @@
                         <div class="inner-box">
                             <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">3</span></div>
                             <div class="content">
-                                <h3>LIFETIME SUPPORT</h3>
-                                <p>Lorem ipsum dolor sit amet, et sectetu adipiscing elit, sed do lilae eiusmod at tempor.</p>
+                                <h3>Quality</h3>
                             </div>
                         </div>
                     </article>
@@ -96,9 +115,8 @@
 		<div class="auto-container">
             
             <div class="sec-title">
-                <h2>WHAT <span class="theme_color">CLIENT</span> SAY</h2>
+                <h2>Our <span class="theme_color">Vision / Mission / Values</span> </h2>
                 <div class="separator small-separator"></div>
-                <div class="text"><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p></div>
             </div>
             
             <!--Slider-->      
@@ -106,119 +124,35 @@
             	
                 <!--Slide-->
                 <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-1.jpg" alt=""></figure>
+                	
                     <div class="info-box">
-                    	<h3>Jack Willshere</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
+                    	<h3>Vision</h3>
                     </div>
                     
                     <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
+                    <p>Our Vision is to achieve excellence in the field of the interiors with designs that appeal to the aesthetic senses and create an ambience conducive to performance and comfort.</p>
                     </div>
                 </article>
                 
                 <!--Slide-->
                 <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-2.jpg" alt=""></figure>
                     <div class="info-box">
-                    	<h3>Missar Hub</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
+                    	<h3>Mission</h3>
                     </div>
                     
                     <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
+                        <p>We aim to provide our customers the best quality of service with market-oriented approach to achieve their business goals.</p>
                     </div>
                 </article>
                 
                 <!--Slide-->
                 <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-3.jpg" alt=""></figure>
                     <div class="info-box">
-                    	<h3>Mark Pine</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
+                    	<h3>Values</h3>
                     </div>
                     
                     <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-1.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Jack Willshere</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-2.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Missar Hub</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-3.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Mark Pine</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-1.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Jack Willshere</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-2.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Missar Hub</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-3.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Mark Pine</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
+                        <p>We believe in being honest and giving the best quality of work to our customers.</p>
                     </div>
                 </article>
                 
@@ -229,86 +163,6 @@
     </section>
     
     
-    <!--FAQ Section-->
-    <section class="faq-section">
-    	<div class="auto-container">
-        	
-            <!--Sec Title-->
-            <div class="sec-title">
-                <h2>FA<span class="theme_color">Q</span></h2>
-                <div class="separator small-separator"></div>
-                <div class="text"><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It’s long establised text</p></div>
-            </div>
-            <br>
-            
-        	<div class="row clearfix">
-            	
-                <!--Column-->
-            	<div class="column col-md-4 col-sm-6 col-xs-12">
-                	<!--Faq Block-->
-                    <div class="faq-block">
-                    	<div class="question"><h3>This is a simple question?</h3></div>
-                        <div class="answer">
-                        	<p>Lorem ipsum dolor sit amet, consectetuer  a the adipiscing elit. Aenean commodo ligulai dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec</p>
-                        </div>
-                    </div>
-                    
-                    <!--Faq Block-->
-                    <div class="faq-block">
-                    	<div class="question"><h3>This is a simple question?</h3></div>
-                        <div class="answer">
-                        	<p>Lorem ipsum dolor sit amet, consectetuer  a the adipiscing elit. Aenean commodo ligulai dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                
-                <!--Column-->
-            	<div class="column col-md-4 col-sm-6 col-xs-12">
-                	<!--Faq Block-->
-                    <div class="faq-block">
-                    	<div class="question"><h3>This is a simple question?</h3></div>
-                        <div class="answer">
-                        	<p>Lorem ipsum dolor sit amet, consectetuer  a the adipiscing elit. Aenean commodo ligulai dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec</p>
-                        </div>
-                    </div>
-                    
-                    <!--Faq Block-->
-                    <div class="faq-block">
-                    	<div class="question"><h3>This is a simple question?</h3></div>
-                        <div class="answer">
-                        	<p>Lorem ipsum dolor sit amet, consectetuer  a the adipiscing elit. Aenean commodo ligulai dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                
-                <!--Column-->
-            	<div class="column col-md-4 col-sm-6 col-xs-12">
-                	<!--Faq Block-->
-                    <div class="faq-block">
-                    	<div class="question"><h3>This is a simple question?</h3></div>
-                        <div class="answer">
-                        	<p>Lorem ipsum dolor sit amet, consectetuer  a the adipiscing elit. Aenean commodo ligulai dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec</p>
-                        </div>
-                    </div>
-                    
-                    <!--Faq Block-->
-                    <div class="faq-block">
-                    	<div class="question"><h3>This is a simple question?</h3></div>
-                        <div class="answer">
-                        	<p>Lorem ipsum dolor sit amet, consectetuer  a the adipiscing elit. Aenean commodo ligulai dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                
-            </div>
-        </div>
-    </section>
     
     
     
@@ -333,31 +187,6 @@
 <script src="js/owl.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var $_Tawk_API={},$_Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/569cfc09aeafd72017dd6ea9/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-15521914-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
 </body>
 
 </html>

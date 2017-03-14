@@ -28,9 +28,18 @@
         <div class="tp-banner-container">
             <div class="tp-banner">
                 <ul>
-                	
-                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/1.jpg"  data-saveperformance="off"  data-title="We are Awsome">
-                    <img src="images/main-slider/1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+                <?php
+                      #include database connection file
+                      include('admin/connection/dbConnection.php');
+                      
+                      #query
+                      $q="select * from slider";
+                      $result=$conn->query($q);
+                     if($result->num_rows>0){ 
+                    
+                    while($row=$result->fetch_assoc()){
+					echo'<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/'.$row['image_path'].'"  data-saveperformance="off"  data-title="We are Awsome">
+                    <img src="images/'.$row['image_path'].'"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
                     
                     <div class="tp-caption lfl tp-resizeme"
                     data-x="left" data-hoffset="15"
@@ -46,69 +55,17 @@
                     data-endeasing="Power4.easeIn"
                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
                     	<div class="bg-green curve-right">
-                        	<h2>DUPPLEX <br>Interior design</h2>
-                         
-                            <a href="#" class="theme-btn btn-style-two">VIEW DETAILS</a>
-                            
+                        	<h2>'.$row['slider_name'].'</h2>
                             <span class="curve"></span>
                         </div>
                     </div>
                     
-                    </li>
-                    
-                    <li data-transition="slidedown" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/4.jpg"  data-saveperformance="off"  data-title="We are Awsome">
-                    <img src="images/main-slider/4.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
-                    
-                    <div class="tp-caption lfb tp-resizeme"
-                    data-x="center" data-hoffset="0"
-                    data-y="bottom" data-voffset="1"
-                    data-speed="1500"
-                    data-start="500"
-                    data-easing="Power3.easeOut"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"
-                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
-                    	<div class="bg-grey curve-top">
-                        	<div class="outer-box clearfix">
-                            	<div class="column title-column"><h2><strong>DUPPLEX</strong> <br>Design</h2></div>
-                            
-                            </div>
-                            
-                            <span class="curve"></span>
-                        </div>
-                    </div>
-                    
-                    </li>
-                    
-                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/2.jpg"  data-saveperformance="off"  data-title="We are Awsome">
-                    <img src="images/main-slider/2.jpg"  alt=""  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat"> 
-                    
-                    <div class="tp-caption lfr tp-resizeme"
-                    data-x="right" data-hoffset="-15"
-                    data-y="center" data-voffset="0"
-                    data-speed="1500"
-                    data-start="500"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"
-                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
-                    	<div class="bg-white curve-left">
-                        	<h2>DUPPLEX <br>Demo</h2>
-                            <a href="#" class="theme-btn btn-style-one">VIEW DETAILS</a>
-                            
-                            <span class="curve"></span>
-                        </div>
-                    </div>
-                    
-                    </li>
+                    </li>';
+                    }
+                  
+                }
+                  $conn->close();   
+                  ?>     
                     
                     
                     
@@ -187,149 +144,6 @@
     </section>
     
     
-    <!--Property Details Section-->
-    <section class="property-details" style="background-image:url(images/parallax/image-2.jpg);">
-    	<div class="auto-container">
-        	<div class="row clearfix">
-            	
-                <!--Left Column-->
-                <div class="col-md-7 col-sm-12 col-xs-12 left-column">
-                	<h2>Property Details</h2>
-                    <!--Tabs Box-->
-                    <div class="tabs-box">
-                    	
-                        <!--Tab Buttons-->
-                        <div class="tab-buttons clearfix">
-                        	<a href="#tab-one" class="tab-btn active-btn">INTERIOR DETAILS</a>
-                            <a href="#tab-two" class="tab-btn">EXTERIOR DETAILS</a>
-                            <a href="#tab-three" class="tab-btn">ROOM DIMENSIONS</a>
-                        </div>
-                        
-                        <!--Tabs Content-->
-                        <div class="tab-content">
-                        	
-                            <!--Tab / Active Tab-->
-                            <div class="tab active-tab" id="tab-one">
-                            	<h3>Interior Details</h3>
-                                <div class="text">
-                                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim Lorem ipsum dolor sit amet,</p>
-                                </div>
-                                
-                                <div class="row clearfix">
-                                    <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    	<!--Styled List-->
-                                        <ul class="styled-list">
-                                            <li>Water Strg : 5000/ltr</li>
-                                            <li>No of Floors : 2</li>
-                                            <li>No Air Condition : 2</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    	<!--Styled List-->
-                                        <ul class="styled-list">
-                                            <li>Bathroom : 2</li>
-                                            <li>No of Stair : 4</li>
-                                            <li>No of Kitchen : 1</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    	<!--Styled List-->
-                                        <ul class="styled-list">
-                                        	<li>Bedrooms : 2</li>
-                                            <li>Parking Capacity : 4</li>
-                                            <li>Swimming Pool : 1</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            
-                            <!--Tab-->
-                            <div class="tab" id="tab-two">
-                            	<h3>Exterior Details</h3>
-                                <div class="text">
-                                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim Lorem ipsum dolor sit amet,</p>
-                                </div>
-                                
-                                <div class="row clearfix">
-                                    <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    	<!--Styled List-->
-                                        <ul class="styled-list">
-                                            <li>Water Strg : 5000/ltr</li>
-                                            <li>No of Floors : 2</li>
-                                            <li>No Air Condition : 2</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    	<!--Styled List-->
-                                        <ul class="styled-list">
-                                            <li>Bathroom : 2</li>
-                                            <li>No of Stair : 4</li>
-                                            <li>No of Kitchen : 1</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    	<!--Styled List-->
-                                        <ul class="styled-list">
-                                        	<li>Bedrooms : 2</li>
-                                            <li>Parking Capacity : 4</li>
-                                            <li>Swimming Pool : 1</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            
-                            <!--Tab-->
-                            <div class="tab" id="tab-three">
-                            	<h3>Room Dimensions</h3>
-                                <div class="text">
-                                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim Lorem ipsum dolor sit amet,</p>
-                                </div>
-                                
-                                <div class="row clearfix">
-                                    <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    	<!--Styled List-->
-                                        <ul class="styled-list">
-                                            <li>Water Strg : 5000/ltr</li>
-                                            <li>No of Floors : 2</li>
-                                            <li>No Air Condition : 2</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    	<!--Styled List-->
-                                        <ul class="styled-list">
-                                            <li>Bathroom : 2</li>
-                                            <li>No of Stair : 4</li>
-                                            <li>No of Kitchen : 1</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    	<!--Styled List-->
-                                        <ul class="styled-list">
-                                        	<li>Bedrooms : 2</li>
-                                            <li>Parking Capacity : 4</li>
-                                            <li>Swimming Pool : 1</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        
-                        
-                        </div>
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     
     <!--Gallery Section-->
     <section class="gallery-section full-width">
@@ -339,19 +153,9 @@
             <div class="sec-title">
                 <h2>Photo <span class="theme_color">Gallery</span></h2>
                 <div class="separator small-separator"></div>
-                <div class="text"><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It’s long establised text.</p></div>
+                
             </div>
             
-            <!--Filter-->
-            <div class="filters">
-            	<ul class="filter-tabs clearfix anim-3-all">
-                    <li class="filter" data-role="button" data-filter="all">All</li>
-                    <li class="filter" data-role="button" data-filter=".bedroom">Bedroom</li>
-                    <li class="filter" data-role="button" data-filter=".living-room">Living Room</li>
-                    <li class="filter" data-role="button" data-filter=".kitchen">Kitchen</li>
-                    <li class="filter" data-role="button" data-filter=".garage">Garage</li>
-                </ul>
-            </div>
             
         </div>
         
@@ -434,160 +238,16 @@
         	<div class="outer-box clearfix">
             	<span class="anim-image wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms"><img src="images/logo.png" alt=""></span>
                 <div class="col-md-9 col-sm-7 col-xs-12">
-                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled .</p>
-                </div>
-                <div class="col-md-3 col-sm-5 col-xs-12 text-right">
-                	<a href="#" class="theme-btn btn-style-two">CONTACT NOW</a>
+                    <p>Indian Cities covered by SZR Interiors..</p>
                 </div>
             </div>
         </div>
     </section>
     
     
-    
-    
-    
-    <!--Testimonials-->
-    <section class="testimonials-section" style="background-image:url(images/background/testimonials-bg.jpg);">
-		<div class="auto-container">
-            
-            <div class="sec-title">
-                <h2>WHAT <span class="theme_color">CLIENT</span> SAY</h2>
-                <div class="separator small-separator"></div>
-                <div class="text"><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p></div>
-            </div>
-            
-            <!--Slider-->      
-        	<div class="testimonials-slider column-carousel three-column">
-            	
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-1.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Jack Willshere</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-2.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Missar Hub</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-3.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Mark Pine</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-1.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Jack Willshere</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-2.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Missar Hub</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-3.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Mark Pine</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-1.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Jack Willshere</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-2.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Missar Hub</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                <!--Slide-->
-                <article class="slide-item">
-                	<figure class="image-box"><img src="images/resource/testi-image-3.jpg" alt=""></figure>
-                    <div class="info-box">
-                    	<h3>Mark Pine</h3>
-                        <p class="designation">Co- Founder at Houzz</p>
-                    </div>
-                    
-                    <div class="slide-text">
-                        <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.”</p>
-                    </div>
-                </article>
-                
-                
-            </div>
-            
-        </div>    
-    </section>
-    
-    
-    
     <!--Map Section-->
     <section class="map-section">
-    	<div class="map-container" id="map-location"></div>
+    	<div class="map-container" id="map"></div>
     </section>
     
     
@@ -617,35 +277,14 @@
 <script src="js/jquery.mixitup.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/owl.js"></script>
+<script src="js/maps.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKVsdYunrKRCicyhnP0FdeHufqht5qIVQ&callback=initMap">
+</script>
 <script src="js/validate.js"></script>
-<script src="http://maps.google.com/maps/api/js"></script>
-<script src="js/googlemaps.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var $_Tawk_API={},$_Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/569cfc09aeafd72017dd6ea9/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-15521914-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 </body>
 
