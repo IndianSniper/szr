@@ -55,7 +55,7 @@
                     data-endeasing="Power4.easeIn"
                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
                     	<div class="bg-green curve-right">
-                        	<h2>'.$row['slider_name'].'</h2>
+                        	<h3>'.$row['slider_name'].'</h3>
                             <span class="curve"></span>
                         </div>
                     </div>
@@ -89,57 +89,41 @@
                 <div class="text"><p>We believe in delivering excellent services in STYLE with ZEAL to get work RECOGNITION within industry. Our logo, inspired from the three core words related to field of Interior Designing.  </p></div>
             </div>
             
-            <div class="five-col-theme">
+            <div class="services-outer">
                 <div class="row clearfix">
                     
                     <!--Column-->
-                    <article class="column">
+                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <div class="inner-box">
-                            <div class="icon"><span class="flaticon-bedroom23"></span></div>
-                            <h4 class="title">Bedrooms</h4>
-                            <h3 class="count">3</h3>
+                            <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">1</span></div>
+                            <div class="content">
+                                <h3>STYLE</h3>
+                            </div>
                         </div>
                     </article>
                     
                     <!--Column-->
-                    <article class="col-md-4 col-sm-6 col-xs-12 column">
+                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="inner-box">
-                            <div class="icon"><span class="flaticon-geometry1"></span></div>
-                            <h4 class="title">Square Feet</h4>
-                            <h3 class="count">2530</h3>
+                            <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">2</span></div>
+                            <div class="content">
+                                <h3>ZEAL</h3>
+                            </div>
                         </div>
                     </article>
                     
                     <!--Column-->
-                    <article class="col-md-4 col-sm-6 col-xs-12 column">
+                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="inner-box">
-                            <div class="icon"><span class="flaticon-hygiene11"></span></div>
-                            <h4 class="title">Baths</h4>
-                            <h3 class="count">2</h3>
-                        </div>
-                    </article>
-                    
-                    <!--Column-->
-                    <article class="col-md-4 col-sm-6 col-xs-12 column">
-                        <div class="inner-box">
-                            <div class="icon"><span class="flaticon-calendar3"></span></div>
-                            <h4 class="title">Year Build</h4>
-                            <h3 class="count">2010</h3>
-                        </div>
-                    </article>
-                    
-                    <!--Column-->
-                    <article class="col-md-4 col-sm-6 col-xs-12 column">
-                        <div class="inner-box">
-                            <div class="icon"><span class="flaticon-transport913"></span></div>
-                            <h4 class="title">Car Parking</h4>
-                            <h3 class="count">1</h3>
+                            <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">3</span></div>
+                            <div class="content">
+                                <h3>RECOGNITION</h3>
+                            </div>
                         </div>
                     </article>
                     
                 </div>
             </div>
-            
         </div>
     </section>
     
@@ -162,70 +146,29 @@
         <div class="images-container">
             <div class="filter-list clearfix">
                 
-                <!--Image Box-->
-                <div class="image-box mix mix_all living-room kitchen garage">
+              <!--Image Box-->
+                 <?php
+                      #include database connection file
+                      include('admin/connection/dbConnection.php');
+                      
+                      #query
+                      $q="select * from gallery limit 8";
+                      $result=$conn->query($q);
+                     if($result->num_rows>0){ 
+                    
+                    while($row=$result->fetch_assoc()){
+					echo'<div class="image-box mix mix_all living-room kitchen garage">
                     <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/1.jpg" class="lightbox-image"><img src="images/gallery/1.jpg" alt=""></a></figure>
-                        <a href="images/gallery/1.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
+                        <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
+                        <img src="images/'.$row['image_path'].'" alt="" style="width:330px;height:200px;"></a></figure>
+                        <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
                     </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom kitchen garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/2.jpg" class="lightbox-image"><img src="images/gallery/2.jpg" alt=""></a></figure>
-                        <a href="images/gallery/2.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/3.jpg" class="lightbox-image"><img src="images/gallery/3.jpg" alt=""></a></figure>
-                        <a href="images/gallery/3.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room kitchen">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/4.jpg" class="lightbox-image"><img src="images/gallery/4.jpg" alt=""></a></figure>
-                        <a href="images/gallery/4.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/5.jpg" class="lightbox-image"><img src="images/gallery/5.jpg" alt=""></a></figure>
-                        <a href="images/gallery/5.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all living-room kitchen">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/6.jpg" class="lightbox-image"><img src="images/gallery/6.jpg" alt=""></a></figure>
-                        <a href="images/gallery/6.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/7.jpg" class="lightbox-image"><img src="images/gallery/7.jpg" alt=""></a></figure>
-                        <a href="images/gallery/7.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
-                <!--Image Box-->
-                <div class="image-box mix mix_all bedroom living-room kitchen">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/gallery/8.jpg" class="lightbox-image"><img src="images/gallery/8.jpg" alt=""></a></figure>
-                        <a href="images/gallery/8.jpg" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>
-                
+                </div>';
+                }
+                  
+                }
+                  $conn->close();   
+                  ?>  
             </div>
         </div>
         
@@ -238,12 +181,13 @@
         	<div class="outer-box clearfix">
             	<span class="anim-image wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms"><img src="images/logo.png" alt=""></span>
                 <div class="col-md-9 col-sm-7 col-xs-12">
-                    <p>Indian Cities covered by SZR Interiors..</p>
+                    <p>We are everywhere....</p>
+                    <p>Indian Cities covered by SZR Interiors.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+    <div class="separator small-separator"></div>
     
     <!--Map Section-->
     <section class="map-section">

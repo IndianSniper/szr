@@ -69,6 +69,10 @@
             In India, our territory coverage includes North Zone, South Zone, East Zone, West Zone, Central Zone and North East Zone.
             </p></div>            
             <div class="separator small-separator"></div>
+            <div class="text"><p>
+            <b>~ Sayed Akhtar Husain (Proprietor)</b><br/>
+            </p></div>
+            <div class="separator small-separator"></div>
             
             <div class="services-outer">
                 <div class="row clearfix">
@@ -123,7 +127,7 @@
         	<div class="testimonials-slider column-carousel three-column">
             	
                 <!--Slide-->
-                <article class="slide-item">
+                <article class="slide-item" style="width:350px;height:160px;">
                 	
                     <div class="info-box">
                     	<h3>Vision</h3>
@@ -135,7 +139,7 @@
                 </article>
                 
                 <!--Slide-->
-                <article class="slide-item">
+                <article class="slide-item" style="width:350px;height:160px;">
                     <div class="info-box">
                     	<h3>Mission</h3>
                     </div>
@@ -146,7 +150,7 @@
                 </article>
                 
                 <!--Slide-->
-                <article class="slide-item">
+                <article class="slide-item" style="width:350px;height:160px;">
                     <div class="info-box">
                     	<h3>Values</h3>
                     </div>

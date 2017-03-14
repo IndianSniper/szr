@@ -45,7 +45,8 @@
                 <!--Content Side-->	
                 <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
                     <section class="blog-container">
-                        
+                        <h4><i>We are privileged to serve ....<i></h4>
+                        <br/>
                         <!--portfolio Post-->
                         <?php
                       #include database connection file
@@ -61,7 +62,7 @@
                             <article class="inner-box">
                             	<!--Image-->
                                 <figure class="image-box">
-                                    <a href="#"><img src="'.$row['image_path'].'" alt=""></a>
+                                    <a href="#"><img src="images/'.$row['image_path'].'" alt=""></a>
                                     <div class="post-options">
 											<a href="#" class="plus-icon img-circle"><span class="icon flaticon-news37"></span></a>
 											<a href="#" class="heart-icon img-circle"><span class="icon fa fa-heart"></span></a>
@@ -69,13 +70,7 @@
                                 </figure>
                                 <!--Lower Content-->
                                 <div class="lower-part">
-                                    <div class="post-info">
-                                       Posted On <a href="#"><strong>March 10, 2014</strong></a>
-                                    </div>
-                                    <div class="post-title"><h3><a href="#">This is post with big title and image</a></h3></div>
-                                    <div class="post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam assumenda modi unde ad optio voluptas quaerat officiis esse deleniti facilis voluptates, quos sapiente. Nihil nostrum soluta odit aliquid placeat, maiores autem sapiente adipisci dignissimos, tempore, nesciunt mollitia quas similique? Corporis illo quis, temporibus porro.</div>
-                                    
-
+                                    <div class="post-title"><h3><a href="#">'.$row['portfolio_name'].'</a></h3></div>
                                 </div>
                             </article>
                         </div>';
