@@ -188,8 +188,8 @@ ob_start();
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a class="animsition-link" href="portfolio_settings.php">
-                    <span class="site-menu-title">Portfolio</span>
+                  <a class="animsition-link" href="clientele_settings.php">
+                    <span class="site-menu-title">Clientele</span>
                   </a>
                 </li>
               </ul>

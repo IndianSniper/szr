@@ -56,8 +56,8 @@
 					echo'<div class="image-box mix mix_all living-room kitchen garage">
                     <div class="inner-box">
                         <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
-                        <img src="images/'.$row['image_path'].'" alt="" style="width:330px;height:200px;"></a></figure>
-                        <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
+                        <img src="images/'.$row['image_path'].'" alt="" style="width: 350px;height:200px;"></a></figure>
+                        <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"  style="width: 370px;"><span class="icon flaticon-add30"></span></a>
                     </div>
                 </div>';
                 }

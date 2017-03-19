@@ -15,7 +15,6 @@ include('connection/dbConnection.php');
 #set timezone
 date_default_timezone_set('Asia/Calcutta');
 
-
 $output=array();
 if(isset($_FILES["serviceimage"]["name"]) && !empty($_POST['name'])){
 
@@ -28,11 +27,12 @@ if(isset($_FILES["serviceimage"]["name"]) && !empty($_POST['name'])){
     $filename=uniqid().".".$FileType;
     $target_file = $target_dir . basename($filename);
     move_uploaded_file($_FILES["serviceimage"]["tmp_name"], $target_file);
+
     
-    $insertService="insert into gallery(image_path,image_name,image_description) values('".$target_file."','".$_POST['name']."','".$_POST['details']."')";
+    $insertService="insert into gallery(image_path,image_name,image_description, category) values('".$target_file."','".$_POST['name']."','".$_POST['details']."','".$_POST['category']."')";
      
     if(empty($_POST['details']))
-    $insertService="insert into gallery(image_path,image_name, image_description) values('".$target_file."','".$_POST['name']."','No description')";
+    $insertService="insert into gallery(image_path,image_name, image_description, category) values('".$target_file."','".$_POST['name']."','No description','".$_POST['category']."')";
         
     if($conn->query($insertService)){
     $output['status']='true';

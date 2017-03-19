@@ -11,17 +11,17 @@
           <h3 class="panel-title">Add Gallery Images
           
           <?php
-          if(isset($_COOKIE['S_ADDED'])){ 
-           echo '<span style="color:green;"><b>'.$_COOKIE['S_ADDED'].'</b></span>';
-           unset($_COOKIE['S_ADDED']);
-           setcookie("S_ADDED",null,-1,"/");
-           }
-           elseif(isset($_COOKIE['S_FAILED'])){ 
-           echo '<span style="color:red;"><b>'.$_COOKIE['S_FAILED'].'</b></span>';
-           unset($_COOKIE['S_FAILED']);
-           setcookie("S_FAILED",null,-1,"/");
-           }
-           ?>
+if(isset($_COOKIE['S_ADDED'])){
+	echo '<span style="color:green;"><b>'.$_COOKIE['S_ADDED'].'</b></span>';
+	unset($_COOKIE['S_ADDED']);
+	setcookie("S_ADDED",null,-1,"/");
+}
+elseif(isset($_COOKIE['S_FAILED'])){
+	echo '<span style="color:red;"><b>'.$_COOKIE['S_FAILED'].'</b></span>';
+	unset($_COOKIE['S_FAILED']);	
+	setcookie("S_FAILED",null,-1,"/");	
+}
+?>
           </h3>
         </div>
             <div class="panel-body">
@@ -48,6 +48,24 @@
                   </div>
                   
                 </div>
+                <div class="form-group">
+                  <label class="col-lg-12 col-sm-3 control-label">Image name :
+                    <span class="required">*</span>
+                  </label>
+                  <select class="form-control"" id="category">
+                    <?php
+                        include('connection/dbConnection.php');
+                        $query = "SELECT * FROM categories";
+                        $result = $conn->query($query); 
+                        if($result->num_rows > 0){
+                          while($row = $result->fetch_assoc()){
+                            echo "<option>".$row["category_name"]."</option>";
+                          }
+                        }
+                        $conn->close();
+                    ?>
+                  </select>
+                </div>
 
                 <div class="form-group">
                   <label class="col-lg-12 col-sm-3 control-label">Details 
@@ -71,7 +89,7 @@
         </div>
  </div>
  
-     <div class="row">
+<div class="row">
         <div class="col-lg-12">
           <!-- Panel Filtering -->
           <div class="panel">
@@ -97,6 +115,7 @@
                     <p><b><img src="'.$row['image_path'].'" width="300" height="300"/><p>
                     <p><b>Name : </b>'.$row['image_name'].'</p>
                     <p><b>Description : </b>'.$row['image_description'].'</p>
+                    <p><b>Category : </b>'.$row['category'].'</p>
                     <button type="submit" class="btn btn-primary" id="DG'.$row['id'].'" value="'.$row['id'].'">Delete</button>
                   </div>
                   <hr/>';

@@ -75,7 +75,6 @@ function initMap() {
         center: latNLngObj.Nagpur,
     });
 
-
     var infowindow = new google.maps.InfoWindow();
 
     var location = [];

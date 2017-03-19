@@ -53,7 +53,7 @@
                             <ul class="navigation">
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="aboutus.php">About US</a></li>
-                                <li><a href="portfolio.php">Portfolio</a></li>
+                                <li><a href="clientele.php">clientele</a></li>
                                 <li><a href="gallery.php">Gallery</a></li>
                                 <li><a href="contact.php">Contact Us</a></li>
                             </ul>

@@ -4,7 +4,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>SZR Interiors | Portfolio</title>
+<title>SZR Interiors | clientele</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/revolution-slider.css" rel="stylesheet">
@@ -28,8 +28,8 @@
     <section class="page-title" style="background-image:url(images/background/page-title-bg-1.jpg);">
     	<div class="auto-container">
         	<div class="content-box">
-            	<h1>Portfolio</h1>
-                <div class="bread-crumb"><a href="index-2.html">Home</a> / <a href="#" class="current">Portfolio</a></div>
+            	<h1>clientele</h1>
+                <div class="bread-crumb"><a href="index-2.html">Home</a> / <a href="#" class="current">clientele</a></div>
             </div>
         </div>
     </section>
@@ -47,13 +47,13 @@
                     <section class="blog-container">
                         <h4><i>We are privileged to serve ....<i></h4>
                         <br/>
-                        <!--portfolio Post-->
+                        <!--clientele Post-->
                         <?php
                       #include database connection file
                       include('admin/connection/dbConnection.php');
                       
                       #query
-                      $q="select * from portfolio";
+                      $q="select * from clientele";
                       $result=$conn->query($q);
                      if($result->num_rows>0){ 
                     
@@ -70,7 +70,7 @@
                                 </figure>
                                 <!--Lower Content-->
                                 <div class="lower-part">
-                                    <div class="post-title"><h3><a href="#">'.$row['portfolio_name'].'</a></h3></div>
+                                    <div class="post-title"><h3><a href="#">'.$row['client_name'].'</a></h3></div>
                                 </div>
                             </article>
                         </div>';

@@ -16,24 +16,24 @@ include('connection/dbConnection.php');
 date_default_timezone_set('Asia/Calcutta');
 
 $output=array();
-if(!empty($_POST['portfolioid'])){
-$checkportfolio="select * from portfolio where id=".$_POST['portfolioid'];
-$resultportfolio=$conn->query($checkportfolio);
+if(!empty($_POST['clienteleid'])){
+$checkclientele="select * from clientele where id=".$_POST['clienteleid'];
+$resultclientele=$conn->query($checkclientele);
 
-if($resultportfolio->num_rows==1){
-    $deleteportfolio="delete from portfolio where id=".$_POST['portfolioid'];
-    if($conn->query($deleteportfolio)){
+if($resultclientele->num_rows==1){
+    $deleteclientele="delete from clientele where id=".$_POST['clienteleid'];
+    if($conn->query($deleteclientele)){
     $output['status']='true';
-    $output['message']='portfolio deleted!';
+    $output['message']='clientele deleted!';
     }
     else{
     $output['status']='false';
-    $output['message']='failed to delete portfolio!';
+    $output['message']='failed to delete clientele!';
     }
 }
 else{
     $output['status']='false';
-    $output['message']='portfolio does not exist!';
+    $output['message']='clientele does not exist!';
 }
 
 }

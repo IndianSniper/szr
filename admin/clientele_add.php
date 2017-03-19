@@ -17,31 +17,31 @@ date_default_timezone_set('Asia/Calcutta');
 
 
 $output=array();
-if(isset($_FILES["portfolioimage"]["name"]) && !empty($_POST['name'])){
+if(isset($_FILES["clienteleimage"]["name"]) && !empty($_POST['name'])){
 
     //upload image
-    $target_dir = "../images/portfolio/";
-    $FileType = pathinfo($_FILES["portfolioimage"]["name"],PATHINFO_EXTENSION);
+    $target_dir = "../images/clientele/";
+    $FileType = pathinfo($_FILES["clienteleimage"]["name"],PATHINFO_EXTENSION);
     $FileType = strtoupper($FileType);
     //check extension
     if($FileType=="PNG" || $FileType=="JPG" || $FileType=="JPEG" || $FileType=="GIF"){
     $filename=uniqid().".".$FileType;
     $target_file = $target_dir . basename($filename);
-    move_uploaded_file($_FILES["portfolioimage"]["tmp_name"], $target_file);
+    move_uploaded_file($_FILES["clienteleimage"]["tmp_name"], $target_file);
     
-    $insertportfolio="insert into portfolio(image_path,portfolio_name) values('".$target_file."','".$_POST['name']."')";
+    $insertclientele="insert into clientele(image_path,client_name) values('".$target_file."','".$_POST['name']."')";
    
-    if($conn->query($insertportfolio)){
+    if($conn->query($insertclientele)){
     $output['status']='true';
-    $output['message']='portfolio added!';
+    $output['message']='clientele added!';
        //set cookie for success 
-       setcookie('P_ADDED','portfolio added!' , time()+3600, "/");
+       setcookie('P_ADDED','clientele added!' , time()+3600, "/");
     }
     else{
     $output['status']='false';
-    $output['message']='failed to add portfolio!';
+    $output['message']='failed to add clientele!';
         //set cookie for failure
-        setcookie('P_FAILED','failed to add portfolio!' , time()+3600, "/");
+        setcookie('P_FAILED','failed to add clientele!' , time()+3600, "/");
     }
   }
   //wrong file format
@@ -61,8 +61,8 @@ else{
     setcookie('P_FAILED','Provide valid data!' , time()+3600, "/");
 }
 
-//redirect to portfolios settings
-header("Location: http://localhost/szr/admin/portfolio_settings.php");
+//redirect to clienteles settings
+header("Location: http://localhost/szr/admin/clientele_settings.php");
 echo json_encode($output,JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);
 $conn->close();
 ?>

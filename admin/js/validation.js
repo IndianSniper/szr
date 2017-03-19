@@ -520,12 +520,12 @@ $(document).ready(function(){
           });
        }
        
-       //to delete portfolio
+       //to delete clientele
        
        if(prefix=="DP"){
            var divval=$('#'+this.id).val();
           // alert(divval);
-          $.post('portfolio_delete.php',{'portfolioid':divval},function(data){
+          $.post('clientele_delete.php',{'clienteleid':divval},function(data){
               
               if(data['status']=="true"){
                   //alert(divval);
