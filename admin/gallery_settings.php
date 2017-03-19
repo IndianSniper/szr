@@ -52,7 +52,7 @@ elseif(isset($_COOKIE['S_FAILED'])){
                   <label class="col-lg-12 col-sm-3 control-label">Image name :
                     <span class="required">*</span>
                   </label>
-                  <select class="form-control"" id="category">
+                  <select class="form-control" id="category">
                     <?php
                         include('connection/dbConnection.php');
                         $query = "SELECT * FROM categories";
