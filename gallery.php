@@ -77,7 +77,7 @@
 					echo'<div class="image-box mix mix_all living-room kitchen garage">
                     <div class="inner-box ">
                         <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
-                        <img src="images/'.$row['image_path'].'" alt="" style="width: 350px;height:200px;"></a></figure>
+                        <img src="images/'.$row['image_path'].'" alt="" style="height:250px;"></a></figure>
                         <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"  style=""><span class="icon flaticon-add30"></span></a>
                     </div>
                 </div>';
@@ -100,13 +100,13 @@
                 <?php
                       #include database connection file
                       include('admin/connection/dbConnection.php');
-                      
                       #query
                       $q="select * from gallery where category = 'Office'";
                       $result=$conn->query($q);
                      if($result->num_rows>0){ 
                     
                     while($row=$result->fetch_assoc()){
+                      
 					echo'<div class="image-box mix mix_all living-room kitchen garage">
                     <div class="inner-box ">
                         <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
