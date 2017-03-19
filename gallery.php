@@ -39,25 +39,46 @@
     	<div class="auto-container">
         </div>
         
+    <div class="form-group">
+        <label class="col-lg-12 col-sm-3 control-label">Select Category:
+            <span class="required">*</span>
+        </label>
+        <select class="form-control" id="category-selector">
+            <?php
+                include('admin/connection/dbConnection.php');
+                $query = "SELECT * FROM categories";
+                $result = $conn->query($query); 
+                if($result->num_rows > 0){
+                    while($row = $result->fetch_assoc()){
+                        echo "<option>".$row["category_name"]."</option>";
+                    }
+                }
+                $conn->close();
+            ?>
+        </select>
+    </div>
+
+    <div id="home-image" style="display:none">
+
         <div class="images-container">
-            <div class="filter-list clearfix">
+            <div class="filter-list clearfix" id="image-content">
                 
                 <!--Image Box-->
-                 <?php
+                <?php
                       #include database connection file
                       include('admin/connection/dbConnection.php');
                       
                       #query
-                      $q="select * from gallery";
+                      $q="select * from gallery where category = 'Home'";
                       $result=$conn->query($q);
                      if($result->num_rows>0){ 
                     
                     while($row=$result->fetch_assoc()){
 					echo'<div class="image-box mix mix_all living-room kitchen garage">
-                    <div class="inner-box">
+                    <div class="inner-box ">
                         <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
                         <img src="images/'.$row['image_path'].'" alt="" style="width: 350px;height:200px;"></a></figure>
-                        <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"  style="width: 370px;"><span class="icon flaticon-add30"></span></a>
+                        <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"  style=""><span class="icon flaticon-add30"></span></a>
                     </div>
                 </div>';
                 }
@@ -69,6 +90,40 @@
            
             </div>
         </div>
+    </div>
+
+    <div id="office-image" style="display:none">
+
+        <div class="images-container">
+            <div class="filter-list clearfix" id="image-content">
+                <!--Image Box-->
+                <?php
+                      #include database connection file
+                      include('admin/connection/dbConnection.php');
+                      
+                      #query
+                      $q="select * from gallery where category = 'Office'";
+                      $result=$conn->query($q);
+                     if($result->num_rows>0){ 
+                    
+                    while($row=$result->fetch_assoc()){
+					echo'<div class="image-box mix mix_all living-room kitchen garage">
+                    <div class="inner-box ">
+                        <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
+                        <img src="images/'.$row['image_path'].'" alt="" style="width: 350px;height:200px;"></a></figure>
+                        <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"  style=""><span class="icon flaticon-add30"></span></a>
+                    </div>
+                </div>';
+                }
+                  
+                }
+                  $conn->close();   
+                  ?>
+                
+           
+            </div>
+        </div>
+    </div>
         
         
     </section>
@@ -98,6 +153,7 @@
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
+<script src="js/gallery.js"></script>
 
 
 </body>

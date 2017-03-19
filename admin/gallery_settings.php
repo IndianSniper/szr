@@ -49,7 +49,7 @@ elseif(isset($_COOKIE['S_FAILED'])){
                   
                 </div>
                 <div class="form-group">
-                  <label class="col-lg-12 col-sm-3 control-label">Image name :
+                  <label class="col-lg-12 col-sm-3 control-label">Category:
                     <span class="required">*</span>
                   </label>
                   <select class="form-control" id="category">
