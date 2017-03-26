@@ -1789,7 +1789,7 @@ ul,li{
 .gallery-section .image-box{
 	position:relative;
 	float:left;
-	display:none;
+	/*display:none;*/
 }
 
 .gallery-section.full-width .image-box{

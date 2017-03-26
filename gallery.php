@@ -7,6 +7,7 @@
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/revolution-slider.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href="css/gallery.css" rel="stylesheet">
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -36,29 +37,27 @@
     
     <!--Gallery Section-->
     <section class="gallery-section full-width" id="gallery-section">
-    	<div class="auto-container">
-        
-        <div class="filters">
-            	<ul class="filter-tabs clearfix anim-3-all">
-                    
-                
-            <?php
-                include('admin/connection/dbConnection.php');
-                $query = "SELECT * FROM categories";
-                $result = $conn->query($query); 
-                if($result->num_rows > 0){
-                    while($row = $result->fetch_assoc()){
-                        echo '<li class="filter" data-role="button" data-filter=".bedroom">'.$row["category_name"].'</li>';
-                    }
-                }
-                $conn->close();
-            ?>
-        </ul>
-    </div>
-        </div>
-        
+        	<div class="auto-container">
+                        
+                <div class="filters">
+                    <ul class="filter-tabs anim-3-all">
+                        <?php
+                            include('admin/connection/dbConnection.php');
+                            $query = "SELECT * FROM categories";
+                            $result = $conn->query($query); 
+                            if($result->num_rows > 0){
+                                while($row = $result->fetch_assoc()){
+                                    echo '<li class="inactive-selection" id="'.$row["category_name"].'">'.$row["category_name"].'</li>';
+                                }
+                            }
+                            $conn->close();
+                        ?>
+                    </ul>
+                </div>
+            </div>
 
-    <div id="home-image" style="display:none">
+        
+    <div id="residential-image" style="display: none">
 
         <div class="images-container">
             <div class="filter-list clearfix" id="image-content">
@@ -69,7 +68,40 @@
                       include('admin/connection/dbConnection.php');
                       
                       #query
-                      $q="select * from gallery where category = 'Home'";
+                      $q="select * from gallery where category = 'Residential'";
+                      $result=$conn->query($q);
+                     if($result->num_rows>0){ 
+                    
+                        while($row=$result->fetch_assoc()){
+                            echo'<div class="image-box mix mix_all living-room kitchen garage">
+                            <div class="inner-box ">
+                                <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
+                                <img src="images/'.$row['image_path'].'" alt="" style="height:250px;"></a></figure>
+                                <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"  style=""><span class="icon flaticon-add30"></span></a>
+                            </div>
+                        </div>';
+                    }
+                  
+                }
+                   $conn->close(); 
+                  ?>
+                
+           
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="retail-image" style="display: none">
+
+        <div class="images-container">
+            <div class="filter-list clearfix" id="image-content">
+                <!--Image Box-->
+                <?php
+                      #include database connection file
+                      include('admin/connection/dbConnection.php');
+                      #query
+                      $q="select * from gallery where category = 'Retail'";
                       $result=$conn->query($q);
                      if($result->num_rows>0){ 
                     
@@ -92,7 +124,7 @@
         </div>
     </div>
 
-    <div id="office-image" style="display:none">
+    <div id="commercial-image" style="display: none">
 
         <div class="images-container">
             <div class="filter-list clearfix" id="image-content">
@@ -101,16 +133,15 @@
                       #include database connection file
                       include('admin/connection/dbConnection.php');
                       #query
-                      $q="select * from gallery where category = 'Office'";
+                      $q="select * from gallery where category = 'Commercial'";
                       $result=$conn->query($q);
                      if($result->num_rows>0){ 
                     
                     while($row=$result->fetch_assoc()){
-                      
 					echo'<div class="image-box mix mix_all living-room kitchen garage">
                     <div class="inner-box ">
                         <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
-                        <img src="images/'.$row['image_path'].'" alt="" style="width: 350px;height:200px;"></a></figure>
+                        <img src="images/'.$row['image_path'].'" alt="" style="height:250px;"></a></figure>
                         <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"  style=""><span class="icon flaticon-add30"></span></a>
                     </div>
                 </div>';
@@ -124,6 +155,8 @@
             </div>
         </div>
     </div>
+
+    
         
         
     </section>

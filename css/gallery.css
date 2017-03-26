@@ -4,3 +4,12 @@
 #image-container-Office{
     display: none;
 }*/
+
+.active-selection {
+    background-color: #71b100;
+    /*background-color: red;*/
+}
+.inactive-selection {
+    background-color: white;
+    /*color: #353535;*/
+}
