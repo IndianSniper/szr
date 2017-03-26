@@ -3,9 +3,9 @@
             
             <div class="footer-content">
             	<div class="social-links">
-                	<a href="#"><span class="fa fa-facebook-f"></span></a>
-                    <a href="#"><span class="fa fa-twitter"></span></a>
-                    <a href="#"><span class="fa fa-google-plus"></span></a>
+                	<a href="https://www.facebook.com/SZR-Interiors-888741024601787/" target="blank"><span class="fa fa-facebook-f"></span></a>
+                    <a href="https://www.linkedin.com/in/szr-interiors-riyaz-3757978b/" target="blank"><span class="fa fa-linkedin"></span></a>
+                    <a href="https://plus.google.com/u/0/photos/114902072439251520492/album/6398796194794694977/6398796194263661394?authkey=CJG0o6iypZmHHw"><span class="fa fa-google-plus"></span></a>
                 </div>
                 <?php
                     

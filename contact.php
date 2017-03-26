@@ -103,7 +103,7 @@
                             <input type="text" name="subject" value="" placeholder="Subject">
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                            <textarea name="message" placeholder="Message"></textarea>
+                            <textarea name="contact_message" placeholder="Message"></textarea>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
                             <button type="submit" name="submit" class="theme-btn btn-style-one">Send</button>

@@ -43,7 +43,7 @@
         	<div class="row clearfix">
             	
                 <!--Content Side-->	
-                <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
+                <div class="col-lg-12 col-md-8 col-sm-7 col-xs-12">
                     <section class="blog-container">
                         <h4><i>We are privileged to serve ....<i></h4>
                         <br/>
@@ -63,10 +63,7 @@
                             	<!--Image-->
                                 <figure class="image-box">
                                     <a href="#"><img src="images/'.$row['image_path'].'" alt=""></a>
-                                    <div class="post-options">
-											<a href="#" class="plus-icon img-circle"><span class="icon flaticon-news37"></span></a>
-											<a href="#" class="heart-icon img-circle"><span class="icon fa fa-heart"></span></a>
-										</div>
+                                 
                                 </figure>
                                 <!--Lower Content-->
                                 <div class="lower-part">

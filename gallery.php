@@ -37,26 +37,26 @@
     <!--Gallery Section-->
     <section class="gallery-section full-width" id="gallery-section">
     	<div class="auto-container">
-        </div>
         
-    <div class="form-group">
-        <label class="col-lg-12 col-sm-3 control-label">Select Category:
-            <span class="required">*</span>
-        </label>
-        <select class="form-control" id="category-selector">
+        <div class="filters">
+            	<ul class="filter-tabs clearfix anim-3-all">
+                    
+                
             <?php
                 include('admin/connection/dbConnection.php');
                 $query = "SELECT * FROM categories";
                 $result = $conn->query($query); 
                 if($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){
-                        echo "<option>".$row["category_name"]."</option>";
+                        echo '<li class="filter" data-role="button" data-filter=".bedroom">'.$row["category_name"].'</li>';
                     }
                 }
                 $conn->close();
             ?>
-        </select>
+        </ul>
     </div>
+        </div>
+        
 
     <div id="home-image" style="display:none">
 

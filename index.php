@@ -12,6 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <link href="css/responsive.css" rel="stylesheet">
+<script src="https://use.fontawesome.com/1b22b0f990.js"></script>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
@@ -135,40 +136,81 @@
         
             <!--Section Title-->
             <div class="sec-title">
-                <h2>Photo <span class="theme_color">Gallery</span></h2>
+                <h2><span class="theme_color">Services</span></h2>
                 <div class="separator small-separator"></div>
                 
             </div>
             
             
         </div>
-        
-        <div class="images-container">
-            <div class="filter-list clearfix">
-                
-              <!--Image Box-->
-                 <?php
-                      #include database connection file
-                      include('admin/connection/dbConnection.php');
-                      
-                      #query
-                      $q="select * from gallery limit 8";
-                      $result=$conn->query($q);
-                     if($result->num_rows>0){ 
+        <div class="auto-container">
+            <div class="services-outer">
+                <div class="row clearfix">
                     
-                    while($row=$result->fetch_assoc()){
-					echo'<div class="image-box mix mix_all living-room kitchen garage">
-                    <div class="inner-box">
-                        <figure class="image"><a href="images/'.$row['image_path'].'" class="lightbox-image">
-                        <img src="images/'.$row['image_path'].'" alt="" style="height:200px"></a></figure>
-                        <a href="images/'.$row['image_path'].'" class="zoom-btn lightbox-image"><span class="icon flaticon-add30"></span></a>
-                    </div>
-                </div>';
-                }
-                  
-                }
-                  $conn->close();   
-                  ?>  
+                    <!--Column-->
+                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="content">
+                             <i class="fa fa-building fa-5x" aria-hidden="true"></i>
+                            <h3>Complete Designing & <br/>Turnkey Solutions </h3>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!--Column-->
+                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="content">
+                            <i class="fa fa-clock-o fa-5x" aria-hidden="true"></i>
+                                <h3>Timely Completion</h3>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!--Column-->
+                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="content">
+                            <i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i>
+                                <h3>Co-ordination with contractors, <br/>supervising of work being executed.</h3>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </div>
+                <div class="row clearfix">
+                    
+                    <!--Column-->
+                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="content">
+                             <i class="fa fa-cogs fa-5x" aria-hidden="true"></i>
+                            <h3>HVAC</h3>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!--Column-->
+                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="content">
+                            <i class="fa fa-wrench fa-5x" aria-hidden="true"></i>>
+                                <h3>Designing of Electrical, <br/>Telecommunication & Data services</h3>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!--Column-->
+                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="content">
+                            <i class="fa fa-line-chart fa-5x" aria-hidden="true"></i>
+                                <h3>Project Optimization through <br/>material selection & scheduling </h3>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </div>
             </div>
         </div>
         
