@@ -1,14 +1,21 @@
 $(document).ready(function ($) {
+    $('.dumbeldore').click(function () {
+        var eltID = this.id;
+        $('.active').removeClass('active');
+        $('#' + eltID + 'image').addClass('active');
+        activeEltStack.push('#' + eltID + 'image');
+    });
+
     $("#Residential").click(function () {
         // console.log('clicked residential');
         $("#Residential").removeClass('inactive-selection');
-        
+
         $("#Retail").removeClass('active-selection');
         $("#Commercial").removeClass('active-selection');
-       
+
         $("#Residential").addClass('active-selection');
         $("#Residential").css('color', 'white');
-        
+
         $("#Retail").addClass('inactive-selection');
         $("#Retail").css('color', '#353535');
         $("#Commercial").addClass('inactive-selection');
@@ -18,18 +25,18 @@ $(document).ready(function ($) {
         $('#commercial-image').hide();
         $('#residential-image').show();
     }).click();
-    
+
     $("#Retail").click(function () {
         // console.log('clicked retail');
 
         $("#Retail").removeClass('inactive-selection');
-        
+
         $("#Residential").removeClass('active-selection');
         $("#Commercial").removeClass('active-selection');
-       
+
         $("#Retail").addClass('active-selection');
         $("#Retail").css('color', 'white');
-       
+
         $("#Residential").addClass('inactive-selection');
         $("#Residential").css('color', '#353535');
         $("#Commercial").addClass('inactive-selection');
@@ -44,13 +51,13 @@ $(document).ready(function ($) {
         // console.log('clicked retail');
 
         $("#Commercial").removeClass('inactive-selection');
-        
+
         $("#Residential").removeClass('active-selection');
         $("#Retail").removeClass('active-selection');
-       
+
         $("#Commercial").addClass('active-selection');
         $("#Commercial").css('color', 'white');
-       
+
         $("#Residential").addClass('inactive-selection');
         $("#Residential").css('color', '#353535');
         $("#Retail").addClass('inactive-selection');
@@ -62,6 +69,10 @@ $(document).ready(function ($) {
     });
 });
 
+function changeActive(eltID) {
+    alert(eltID);
+    $('#' + eltID + 'image').addClass('active');
+}
 
 /*window.onload = function () {
         var selector = document.getElementById('category-selector');

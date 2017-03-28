@@ -26,10 +26,10 @@
     <!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/page-title-bg-1.jpg);">
     	<div class="auto-container">
-        	<!--div class="content-box">
+        	<div class="content-box">
             	<h1>Gallery</h1>
                 <div class="bread-crumb"><a href="index-2.html">Home</a> / <a href="#" class="current">Gallery</a></div>
-            </div-->
+            </div>
         </div>
     </section>
     
@@ -72,7 +72,7 @@
                      $result=$conn->query($q);
                      if($result->num_rows>0){ 
                         while($row=$result->fetch_assoc()){
-                            echo'<div class="col-sm-4 effect7">
+                            echo'<div class="col-sm-4 effect7 dumbeldore" id="'.$row['id'].'">
                                     <a href="" class="" data-toggle="modal" data-target="#imageModal">
                                     <img src="images/'.$row['image_path'].'" class="img-thumbnail" alt="" style="height:250px; width:100%"></a>          
                                 </div>';
@@ -112,14 +112,14 @@
                                     while($row=$result->fetch_assoc()){
                                         $count++;
                                         if($count == 1){
-                                            echo'<div class="item active">
+                                            echo'<div class="item" id="'.$row['id'].'image">
                                                     <img src="images/'.$row['image_path'].'" alt="">
                                                     <div class="carousel-caption">                              
                                                     <p>'.$row['image_name'].' </p>
                                                     </div>
                                                 </div>';
                                         }else{
-                                             echo'<div class="item">
+                                             echo'<div class="item" id="'.$row['id'].'image">
                                                     <img src="images/'.$row['image_path'].'" alt="">
                                                     <div class="carousel-caption">                              
                                                     <p>'.$row['image_name'].' </p>
