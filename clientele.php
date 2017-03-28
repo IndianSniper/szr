@@ -53,22 +53,22 @@
                       include('admin/connection/dbConnection.php');
                       
                       #query
-                      $q="select * from clientele";
+                      $q="select * from clientele order by client_name";
                       $result=$conn->query($q);
                      if($result->num_rows>0){ 
                     
                     while($row=$result->fetch_assoc()){
-					echo'<div class="blog-post wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+					echo'<div class="blog-post wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="float:left;margin-right:15px;">
                             <article class="inner-box">
                             	<!--Image-->
                                 <figure class="image-box">
-                                    <a href="#"><img src="images/'.$row['image_path'].'" alt=""></a>
+                                    <a href="#"><img src="images/'.$row['image_path'].'" alt="" width="200" height=200""></a>
                                  
                                 </figure>
                                 <!--Lower Content-->
-                                <div class="lower-part">
+                                <!--div class="lower-part">
                                     <div class="post-title"><h3><a href="#">'.$row['client_name'].'</a></h3></div>
-                                </div>
+                                </div-->
                             </article>
                         </div>';
                     }

@@ -54,7 +54,7 @@
                     data-endelementdelay="0.3"
                     data-endspeed="1200"
                     data-endeasing="Power4.easeIn"
-                    style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                    style="z-index: 4; max-width: auto; max-height: 400; white-space: nowrap;">
                     	<div class="bg-green curve-right">
                         	<h3>'.$row['slider_name'].'</h3>
                             <span class="curve"></span>
@@ -78,59 +78,8 @@
     </section>
     
     
-    
-    <!--Properties Section-->
-    <section class="properties-section">
-    	<div class="auto-container">
-        
-            <!--Section Title-->
-            <div class="sec-title">
-                <h2>About <span class="theme_color">Us</span></h2>
-                <div class="separator small-separator"></div>
-                <div class="text"><p>We believe in delivering excellent services in STYLE with ZEAL to get work RECOGNITION within industry. Our logo, inspired from the three core words related to field of Interior Designing.  </p></div>
-            </div>
-            
-            <div class="services-outer">
-                <div class="row clearfix">
-                    
-                    <!--Column-->
-                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">1</span></div>
-                            <div class="content">
-                                <h3>STYLE</h3>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!--Column-->
-                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">2</span></div>
-                            <div class="content">
-                                <h3>ZEAL</h3>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!--Column-->
-                    <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">3</span></div>
-                            <div class="content">
-                                <h3>RECOGNITION</h3>
-                            </div>
-                        </div>
-                    </article>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    
-    <!--Gallery Section-->
+
+    <!--Services Section-->
     <section class="gallery-section full-width">
     	<div class="auto-container">
         
@@ -150,8 +99,9 @@
                     <!--Column-->
                     <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <div class="inner-box">
+                        <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">1</span></div>
                             <div class="content">
-                             <i class="fa fa-building fa-5x" aria-hidden="true"></i>
+                             <!--i class="fa fa-building fa-5x" aria-hidden="true"></i-->
                             <h3>Complete Designing & <br/>Turnkey Solutions </h3>
                             </div>
                         </div>
@@ -160,8 +110,9 @@
                     <!--Column-->
                     <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="inner-box">
+                        <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">1</span></div>
                             <div class="content">
-                            <i class="fa fa-clock-o fa-5x" aria-hidden="true"></i>
+                            <!--i class="fa fa-clock-o fa-5x" aria-hidden="true"></i-->
                                 <h3>Timely Completion</h3>
                             </div>
                         </div>
@@ -170,8 +121,9 @@
                     <!--Column-->
                     <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="inner-box">
+                        <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">1</span></div>
                             <div class="content">
-                            <i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i>
+                            <!--i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i-->
                                 <h3>Co-ordination with contractors, <br/>supervising of work being executed.</h3>
                             </div>
                         </div>
@@ -183,8 +135,9 @@
                     <!--Column-->
                     <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <div class="inner-box">
+                        <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">1</span></div>
                             <div class="content">
-                             <i class="fa fa-cogs fa-5x" aria-hidden="true"></i>
+                             <!--i class="fa fa-cogs fa-5x" aria-hidden="true"></i-->
                             <h3>HVAC</h3>
                             </div>
                         </div>
@@ -193,8 +146,9 @@
                     <!--Column-->
                     <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="inner-box">
+                        <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">1</span></div>
                             <div class="content">
-                            <i class="fa fa-wrench fa-5x" aria-hidden="true"></i>>
+                            <!--i class="fa fa-wrench fa-5x" aria-hidden="true"></i-->
                                 <h3>Designing of Electrical, <br/>Telecommunication & Data services</h3>
                             </div>
                         </div>
@@ -203,8 +157,9 @@
                     <!--Column-->
                     <article class="col-md-4 col-sm-6 col-xs-12 column wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="inner-box">
+                        <div class="icon-left"><span class="icon flaticon-check52"></span><span class="number">1</span></div>
                             <div class="content">
-                            <i class="fa fa-line-chart fa-5x" aria-hidden="true"></i>
+                            <!--i class="fa fa-line-chart fa-5x" aria-hidden="true"></i-->
                                 <h3>Project Optimization through <br/>material selection & scheduling </h3>
                             </div>
                         </div>
@@ -229,8 +184,6 @@
             </div>
         </div>
     </section>
-    <div class="separator small-separator"></div>
-    
     <!--Map Section-->
     <section class="map-section">
     	<div class="map-container" id="map"></div>

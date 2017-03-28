@@ -26,10 +26,10 @@
     <!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/page-title-bg-1.jpg);">
     	<div class="auto-container">
-        	<div class="content-box">
+        	<!--div class="content-box">
             	<h1>Gallery</h1>
                 <div class="bread-crumb"><a href="index-2.html">Home</a> / <a href="#" class="current">Gallery</a></div>
-            </div>
+            </div-->
         </div>
     </section>
     

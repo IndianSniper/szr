@@ -22,15 +22,6 @@
     <!--include header-->
     <?php include('header.php'); ?>
     
-    <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/page-title-bg-1.jpg);">
-    	<div class="auto-container">
-        	<div class="content-box">
-            	<h1>About Us</h1>
-                <div class="bread-crumb"><a href="index-2.html">Home</a> / <a href="#" class="current">About Us</a></div>
-            </div>
-        </div>
-    </section>
     
     
     

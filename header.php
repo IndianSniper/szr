@@ -55,7 +55,7 @@
                                 <li><a href="aboutus.php">About US</a></li>
                                 <li><a href="clientele.php">clientele</a></li>
                                 <li><a href="gallery.php">Gallery</a></li>
-                                <li><a href="contact.php">Contact Us</a></li>
+                                <li><a href="contact.php">Business enquiry</a></li>
                             </ul>
                         </div>
                     </nav><!-- Main Menu End-->

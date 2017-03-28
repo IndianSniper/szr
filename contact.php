@@ -25,10 +25,10 @@
     <!--Page Title-->
     <section class="page-title" style="background-image:url(images/background/page-title-bg-1.jpg);">
     	<div class="auto-container">
-        	<div class="content-box">
+        	<!--div class="content-box">
             	<h1>Contact Us</h1>
                 <div class="bread-crumb"><a href="index-2.html">Home</a> / <a href="#" class="current">Contact Us</a></div>
-            </div>
+            </div-->
         </div>
     </section>
     
@@ -47,17 +47,19 @@
                         <h3>ADDRESS</h3>
                         <p>SZR Interiors, Sai Shraddha I Plot, A1 Building, Shop No.3, Daulat Nagar, Relief Road, Santacruz (West) Mumbai – 400 054</p>
                     </div>
-                    <!--Column-->
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <span class="icon flaticon-telephone51"></span>
-                        <h3>PHONE</h3>
-                        <p>+91 9833 1819 65</p>
-                    </div>
+                    
                     <!--Column-->
                     <div class="column col-md-4 col-sm-6 col-xs-12">
                         <span class="icon flaticon-envelope126"></span>
                         <h3>EMAIL</h3>
                         <p>Info@szrinteriors.com, <br>szrinteriors@gmail.com</p>
+                    </div>
+                    
+                    <!--Column-->
+                    <div class="column col-md-4 col-sm-6 col-xs-12">
+                        <span class="icon flaticon-telephone51"></span>
+                        <h3>PHONE</h3>
+                        <p>+91 9833 1819 65</p>
                     </div>
                     
                 </div>
@@ -66,21 +68,11 @@
         </div>
     </section>
     
-    
-    
-    <!--Map Section-->
-    <section class="map-section">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d942.5928272813666!2d72.8343379268362!3d19.091360013665817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA1JzI4LjkiTiA3MsKwNTAnMDUuNiJF!5e0!3m2!1sen!2s!4v1489461155656" style="width:100%;height:450px;" frameborder="0" style="border:0" allowfullscreen></iframe>
-        
-    </section>
-    
-    
-    
     <!--Contact Section-->
     <section class="default-section faded-section contact-section" style="background-image:url(images/background/contact-bg.jpg);">
     	<div class="auto-container small-container">
             	<div class="sec-title">
-                	<h2>Contact Form</h2>
+                	<h2>Business Enquiry</h2>
                 </div>
                 
             <!--Contact Form-->
@@ -120,7 +112,11 @@
             
         </div>
     </section>
-    
+        <!--Map Section-->
+    <section class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d942.5928272813666!2d72.8343379268362!3d19.091360013665817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA1JzI4LjkiTiA3MsKwNTAnMDUuNiJF!5e0!3m2!1sen!2s!4v1489461155656" style="width:100%;height:450px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+    </section>
 </div>
 <!--End pagewrapper-->
 
