@@ -1,9 +1,18 @@
 $(document).ready(function ($) {
+
+    $('.carousel').carousel({
+        interval: false
+    });
     $('.dumbeldore').click(function () {
         var eltID = this.id;
+        /*var all = $(".active").map(function () {
+            return this.id;
+        }).get();*/
         $('.active').removeClass('active');
+
+
+        // console.log(all);
         $('#' + eltID + 'image').addClass('active');
-        activeEltStack.push('#' + eltID + 'image');
     });
 
     $("#Residential").click(function () {

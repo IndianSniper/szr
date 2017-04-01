@@ -69,9 +69,9 @@
                      $result=$conn->query($q);
                      if($result->num_rows>0){ 
                         while($row=$result->fetch_assoc()){
-                            echo'<div class="col-sm-6 col-lg-3 img-hover dumbeldore" id="'.$row['id'].'">
+                            echo'<div class="col-sm-6 col-lg-3 img-hover dumbeldore no-padding" id="'.$row['id'].'">
                                     <a href="" class="" data-toggle="modal" data-target="#residenceImageModal">
-                                    <img src="images/'.$row['image_path'].'" class="img-thumbnail" alt="" style="height:250px; width:100%"></a>          
+                                    <img src="images/'.$row['image_path'].'" class="img-thumbnail no-padding no-border" alt="" style="height:250px; width:100%"></a>          
                                 </div>';
                         }
                     }
@@ -91,9 +91,9 @@
                      $result=$conn->query($q);
                      if($result->num_rows>0){ 
                         while($row=$result->fetch_assoc()){
-                            echo'<div class="col-sm-4 col-md-3 img-hover dumbeldore" id="'.$row['id'].'">
+                            echo'<div class="col-sm-6 col-lg-3 img-hover dumbeldore no-padding" id="'.$row['id'].'">
                                     <a href="" class="" data-toggle="modal" data-target="#retailImageModal">
-                                    <img src="images/'.$row['image_path'].'" class="img-thumbnail" alt="" style="height:250px; width:100%"></a>          
+                                    <img src="images/'.$row['image_path'].'" class="img-thumbnail no-padding no-border" alt="" style="height:250px; width:100%"></a>          
                                 </div>';
                         }
                     }
@@ -113,9 +113,9 @@
                      $result=$conn->query($q);
                      if($result->num_rows>0){ 
                         while($row=$result->fetch_assoc()){
-                            echo'<div class="col-sm-4 col-md-3 img-hover dumbeldore" id="'.$row['id'].'">
-                                    <a href="" class="" data-toggle="modal" data-target="#residenceImageModal">
-                                    <img src="images/'.$row['image_path'].'" class="img-thumbnail" alt="" style="height:250px; width:100%"></a>          
+                            echo'<div class="col-sm-6 col-lg-3 img-hover dumbeldore no-padding" id="'.$row['id'].'">
+                                    <a href="" class="" data-toggle="modal" data-target="#commercialImageModal">
+                                    <img src="images/'.$row['image_path'].'" class="img-thumbnail no-padding no-border" alt="" style="height:250px; width:100%"></a>          
                                 </div>';
                         }
                     }
@@ -129,13 +129,10 @@
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-                    <!--<h4 class="modal-title">Modal Header</h4>-->
-                </div>
-                <div class="modal-body">
+                <div class="modal-body no-padding">
+                    <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
                     <!--<p>IMAGES GO HERE</p>-->
-                    <div id="residenceImageCarousel" class="carousel slide" data-ride="carousel">
+                    <div id="residenceImageCarousel" class="carousel slide" >
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
@@ -147,15 +144,25 @@
                                 $count = 0;
                                 $q="select * from gallery where category = 'Residential'";
                                 $result=$conn->query($q);
-                                if($result->num_rows>0){ 
-                                
+                                if($result->num_rows>0){   
                                     while($row=$result->fetch_assoc()){
-                                        echo'<div class="item" id="'.$row['id'].'image">
-                                                <img src="images/'.$row['image_path'].'" alt="">
-                                                <div class="carousel-caption">                              
-                                                <p>'.$row['image_name'].' </p>
-                                                </div>
-                                            </div>';
+                                        if($count === 0){
+                                            echo'<div class="item active" id="'.$row['id'].'image">
+                                                    <img src="images/'.$row['image_path'].'" alt="">
+                                                    <div class="carousel-caption">                              
+                                                    <p>'.$row['image_name'].' </p>
+                                                    </div>
+                                                </div>';
+                                                $count++;
+                                        }
+                                        else{
+                                            echo'<div class="item" id="'.$row['id'].'image">
+                                                    <img src="images/'.$row['image_path'].'" alt="">
+                                                    <div class="carousel-caption">                              
+                                                    <p>'.$row['image_name'].' </p>
+                                                    </div>
+                                                </div>';
+                                        }
                                     }
                                 }
                                 $conn->close(); 
@@ -173,9 +180,6 @@
                         </a>
                     </div><!-- END CAROUSEL -->
                 </div><!-- END MODAL BODY-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
             </div>
         </div>
     </div><!-- END MODAL -->
@@ -184,13 +188,10 @@
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-                    <!--<h4 class="modal-title">Modal Header</h4>-->
-                </div>
-                <div class="modal-body">
+                <div class="modal-body no-padding">
                     <!--<p>IMAGES GO HERE</p>-->
-                    <div id="retailImageCarousel" class="carousel slide" data-ride="carousel">
+                    <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
+                    <div id="retailImageCarousel" class="carousel slide" >
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
@@ -205,12 +206,23 @@
                                 if($result->num_rows>0){ 
                                 
                                     while($row=$result->fetch_assoc()){
-                                        echo'<div class="item" id="'.$row['id'].'image">
-                                                <img src="images/'.$row['image_path'].'" alt="">
-                                                <div class="carousel-caption">                              
-                                                <p>'.$row['image_name'].' </p>
-                                                </div>
-                                            </div>';
+                                        if($count === 0){
+                                            echo'<div class="item active" id="'.$row['id'].'image">
+                                                    <img src="images/'.$row['image_path'].'" alt="">
+                                                    <div class="carousel-caption">                              
+                                                    <p>'.$row['image_name'].' </p>
+                                                    </div>
+                                                </div>';
+                                                $count++;
+                                        }
+                                        else{
+                                            echo'<div class="item" id="'.$row['id'].'image">
+                                                    <img src="images/'.$row['image_path'].'" alt="">
+                                                    <div class="carousel-caption">                              
+                                                    <p>'.$row['image_name'].' </p>
+                                                    </div>
+                                                </div>';
+                                        }
                                     }
                                 }
                                 $conn->close(); 
@@ -228,9 +240,6 @@
                         </a>
                     </div><!-- END CAROUSEL -->
                 </div><!-- END MODAL BODY-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
             </div>
         </div>
     </div><!-- END MODAL -->
@@ -239,13 +248,10 @@
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-                    <!--<h4 class="modal-title">Modal Header</h4>-->
-                </div>
-                <div class="modal-body">
+                <div class="modal-body no-padding">
                     <!--<p>IMAGES GO HERE</p>-->
-                    <div id="commercialImageCarousel" class="carousel slide" data-ride="carousel">
+                    <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
+                    <div id="commercialImageCarousel" class="carousel slide">
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
@@ -260,12 +266,23 @@
                                 if($result->num_rows>0){ 
                                 
                                     while($row=$result->fetch_assoc()){
-                                        echo'<div class="item" id="'.$row['id'].'image">
-                                                <img src="images/'.$row['image_path'].'" alt="">
-                                                <div class="carousel-caption">                              
-                                                <p>'.$row['image_name'].' </p>
-                                                </div>
-                                            </div>';
+                                        if($count === 0){
+                                            echo'<div class="item active" id="'.$row['id'].'image">
+                                                    <img src="images/'.$row['image_path'].'" alt="">
+                                                    <div class="carousel-caption">                              
+                                                    <p>'.$row['image_name'].' </p>
+                                                    </div>
+                                                </div>';
+                                                $count++;
+                                        }
+                                        else{
+                                            echo'<div class="item" id="'.$row['id'].'image">
+                                                    <img src="images/'.$row['image_path'].'" alt="">
+                                                    <div class="carousel-caption">                              
+                                                    <p>'.$row['image_name'].' </p>
+                                                    </div>
+                                                </div>';
+                                        }
                                     }
                                 }
                                 $conn->close(); 
@@ -283,9 +300,6 @@
                         </a>
                     </div><!-- END CAROUSEL -->
                 </div><!-- END MODAL BODY-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
             </div>
         </div>
     </div><!-- END MODAL -->
@@ -318,7 +332,6 @@
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.mixitup.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/script.js"></script>
 <script src="js/gallery.js"></script>

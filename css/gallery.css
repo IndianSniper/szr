@@ -5,6 +5,24 @@
     display: none;
 }*/
 
+.close-btn{
+    z-index: 100;
+    position: absolute;
+    right: 4px;
+    top: -4px;
+    font-size: 40px;
+    color: white;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.no-border {
+    border: 0px;
+    border-radius: 0px;
+}
+
 .active-selection {
     background-color: #71b100;
     /*background-color: red;*/
