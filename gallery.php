@@ -69,7 +69,7 @@
                      $result=$conn->query($q);
                      if($result->num_rows>0){ 
                         while($row=$result->fetch_assoc()){
-                            echo'<div class="col-sm-4 col-md-3 img-hover dumbeldore" id="'.$row['id'].'">
+                            echo'<div class="col-sm-6 col-lg-3 img-hover dumbeldore" id="'.$row['id'].'">
                                     <a href="" class="" data-toggle="modal" data-target="#residenceImageModal">
                                     <img src="images/'.$row['image_path'].'" class="img-thumbnail" alt="" style="height:250px; width:100%"></a>          
                                 </div>';
