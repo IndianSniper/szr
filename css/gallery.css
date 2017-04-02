@@ -5,6 +5,15 @@
     display: none;
 }*/
 
+.invisible {
+    position: absolute;
+}
+
+.middle{
+    position: relative;
+    top:200px;
+}
+
 .dumbeldore {
     overflow: hidden;
 }
@@ -20,6 +29,13 @@
 
 .no-padding {
     padding: 0px;
+}
+
+.no-margin {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .no-border {

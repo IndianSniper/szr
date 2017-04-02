@@ -58,7 +58,7 @@
 
         
     <div id="residential-image" style="display: none">
-        <div class="row">
+        <div class="row no-margin">
                 
                 <!--Image Box-->
                 <?php
@@ -80,7 +80,7 @@
         </div>
     </div>
     <div id="retail-image" style="display: none">
-        <div class="row">
+        <div class="row no-margin">
                 
                 <!--Image Box-->
                 <?php
@@ -102,7 +102,7 @@
         </div>
     </div>
     <div id="commercial-image" style="display: none">
-        <div class="row">
+        <div class="row no-margin">
                 
                 <!--Image Box-->
                 <?php
@@ -128,7 +128,7 @@
     <div id="residenceImageModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
-            <div class="modal-content">
+            <div class="modal-content middle">
                 <div class="modal-body no-padding">
                     <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
                     <!--<p>IMAGES GO HERE</p>-->
@@ -187,7 +187,7 @@
     <div id="retailImageModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
-            <div class="modal-content">
+            <div class="modal-content middle">
                 <div class="modal-body no-padding">
                     <!--<p>IMAGES GO HERE</p>-->
                     <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
@@ -247,7 +247,7 @@
     <div id="commercialImageModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
-            <div class="modal-content">
+            <div class="modal-content middle">
                 <div class="modal-body no-padding">
                     <!--<p>IMAGES GO HERE</p>-->
                     <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
