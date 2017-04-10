@@ -129,7 +129,7 @@
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content middle">
-                <div class="modal-body no-padding">
+                <div class="modal-body no-padding image-border">
                     <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
                     <!--<p>IMAGES GO HERE</p>-->
                     <div id="residenceImageCarousel" class="carousel slide" >
@@ -188,7 +188,7 @@
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content middle">
-                <div class="modal-body no-padding">
+                <div class="modal-body no-padding image-border">
                     <!--<p>IMAGES GO HERE</p>-->
                     <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
                     <div id="retailImageCarousel" class="carousel slide" >
@@ -248,7 +248,7 @@
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content middle">
-                <div class="modal-body no-padding">
+                <div class="modal-body no-padding image-border">
                     <!--<p>IMAGES GO HERE</p>-->
                     <button type="button" class="close close-btn" data-dismiss="modal">&times;</button>
                     <div id="commercialImageCarousel" class="carousel slide">

@@ -9,6 +9,14 @@
     position: absolute;
 }
 
+.modal {
+    background-color: rgba(2, 2, 2, 0.89);
+}
+
+.image-border {
+    border: 5px solid white;
+}
+
 .middle{
     position: relative;
     top:200px;
